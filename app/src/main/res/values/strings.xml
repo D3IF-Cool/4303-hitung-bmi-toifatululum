@@ -26,5 +26,9 @@ menentukan apakah berat badanmu ideal atau tidak. Cobalah sekarang!</string>
     <string name="saran_gemuk">Cobalah olahrga alari. Kemanapun boleh, asal tidak lari dari kehidupan</string>
     <string name="lihat_saran">Lihat Saran</string>
     <string name="copyright">Hitung BMI merupakan sebuah aplikasi Android untuk menghitung body mass index (BMI) sehinggaseseorang dapat mengetahui apakah berat badannya ideal, gemuk atau kurus.\n\nAplikasi ini dibuat untukkelas Mobpro 1. Temukan kodenya di https://github.com/toifatululum/hitungbmi\n\nCopyright © 2021 Toifatul Ngulum.\nAll rights reserved.</string>
+    <string name="bagikan">Bagikan</string>
     <string name="tentang_aplikasi">Tentang Aplikasi</string>
+    <string name="bagikan_template">Berat badan: %1$s kg\nTinggi badan: %2$s
+cm\nJenis kelamin: %3$s\n\n%4$s\n%5$s</string>
+
 </resources>
