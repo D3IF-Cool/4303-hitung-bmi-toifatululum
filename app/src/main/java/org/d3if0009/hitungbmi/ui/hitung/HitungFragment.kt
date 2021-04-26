@@ -34,18 +34,26 @@ class HitungFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.menu_about) {
-            findNavController().navigate(
-                    R.id.action_hitungFragment_to_aboutFragment)
-            return true
+        when (item.itemId) {
+            R.id.menu_histori -> {
+                findNavController().navigate(R.id.action_hitungFragment_to_historiFragment)
+                return true
+            }
+            R.id.menu_about -> {
+                findNavController().navigate(R.id.action_hitungFragment_to_saranFragment)
+                return true
+            }
         }
         return super.onOptionsItemSelected(item)
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         binding = FragmentHitungBinding.inflate(
-                layoutInflater, container, false)
+            layoutInflater, container, false
+        )
 
         binding.button.setOnClickListener { hitungBmi() }
         binding.buttonReset.setOnClickListener { resetForm() }
@@ -68,16 +76,20 @@ class HitungFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel.getNavigasi().observe(viewLifecycleOwner, {
             if (it == null) return@observe
-            findNavController().navigate(HitungFragmentDirections
-                    .actionHitungFragmentToSaranFragment(it))
+            findNavController().navigate(
+                HitungFragmentDirections
+                    .actionHitungFragmentToSaranFragment(it)
+            )
             viewModel.selesaiNavigasi()
         })
 
         viewModel.getHasilBmi().observe(viewLifecycleOwner, {
             if (it == null) return@observe
             binding.bmiTextView.text = getString(R.string.bmi_x, it.bmi)
-            binding.kategoriTextView.text = getString(R.string.kategori_x,
-                    getKategori(it.kategori))
+            binding.kategoriTextView.text = getString(
+                R.string.kategori_x,
+                getKategori(it.kategori)
+            )
             binding.buttonGroup.visibility = View.VISIBLE
         })
 
@@ -116,17 +128,20 @@ class HitungFragment : Fragment() {
             getString(R.string.pria)
         else
             getString(R.string.wanita)
-        val message = getString(R.string.bagikan_template,
-                binding.beratEditText.text,
-                binding.tinggiEditText.text,
-                gender,
-                binding.bmiTextView.text,
-                binding.kategoriTextView.text
+        val message = getString(
+            R.string.bagikan_template,
+            binding.beratEditText.text,
+            binding.tinggiEditText.text,
+            gender,
+            binding.bmiTextView.text,
+            binding.kategoriTextView.text
         )
         val shareIntent = Intent(Intent.ACTION_SEND)
         shareIntent.setType("text/plain").putExtra(Intent.EXTRA_TEXT, message)
         if (shareIntent.resolveActivity(
-                        requireActivity().packageManager) != null) {
+                requireActivity().packageManager
+            ) != null
+        ) {
             startActivity(shareIntent)
         }
     }
