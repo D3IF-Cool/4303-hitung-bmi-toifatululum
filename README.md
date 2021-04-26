@@ -9,4 +9,6 @@ Kelas   : 43 -03
 ![alt_text](https://github.com/D3IF-Cool/4303-hitung-bmi-toifatululum/blob/master/Screenshoot/4.png?raw=true)
 ![alt_text](https://github.com/D3IF-Cool/4303-hitung-bmi-toifatululum/blob/master/Screenshoot/5.png?raw=true)
 ![alt_text](https://github.com/D3IF-Cool/4303-hitung-bmi-toifatululum/blob/master/Screenshoot/6.png?raw=true)
-
+![alt_text](https://github.com/D3IF-Cool/4303-hitung-bmi-toifatululum/blob/architecture/Screenshoot/7.png?raw=true)
+![alt_text](https://github.com/D3IF-Cool/4303-hitung-bmi-toifatululum/blob/architecture/Screenshoot/8.png?raw=true)
+![alt_text](https://github.com/D3IF-Cool/4303-hitung-bmi-toifatululum/blob/architecture/Screenshoot/9.png?raw=true)
